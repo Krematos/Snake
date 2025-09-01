@@ -75,7 +75,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
     // metoda pro inicializaci tlačítka pro opětovné hraní
     public void initPlayAgainButton() {
-        playAgainButton = new JButton("Hraj znovu");  // vytvoří tlačítko pro opětovné hraní
+        playAgainButton = new JButton("Hrát znovu");  // vytvoří tlačítko pro opětovné hraní
         playAgainButton.setForeground(Color.white);
         playAgainButton.setBackground(new Color(0xD2691E));
         playAgainButton.setFont(new Font("Monospaced", Font.BOLD, 30));
@@ -197,12 +197,12 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setColor(new Color(0xD2691E));
         g.setFont(new Font("Monospaced", Font.BOLD, 50));
         FontMetrics metricsKonec = getFontMetrics(g.getFont());
-        g.drawString("Konec hry ", (OBRAZOVKA_VYSKA/2 - metricsKonec.stringWidth("Konec hry")), OBRAZOVKA_SIRKA/2);
+        g.drawString("Konec hry ", (OBRAZOVKA_VYSKA/2 + 125 - metricsKonec.stringWidth("Konec hry")), OBRAZOVKA_SIRKA/2);
        // g.drawString("  Mačkáš mi hada kámo!", (OBRAZOVKA_VYSKA/1 - metricsKonec.stringWidth("Mačkáš mi hada kámo!"))/3, OBRAZOVKA_SIRKA/2 + g.getFont().getSize());
         // tlačítko pro opětovné hraní
         if(!playAgainButton.isVisible()) {
             playAgainButton.setVisible(true); // zobrazí tlačítko pro opětovné hraní
-            playAgainButton.setBounds(OBRAZOVKA_VYSKA / 2 - 100, OBRAZOVKA_SIRKA / 2 + 75, 200, 50); // nastaví pozici tlačítka
+            playAgainButton.setBounds(OBRAZOVKA_VYSKA / 2 - 85, OBRAZOVKA_SIRKA / 2 + 75, 200, 50); // nastaví pozici tlačítka
         }
     }
     @Override
