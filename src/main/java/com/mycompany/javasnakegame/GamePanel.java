@@ -119,7 +119,7 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setColor(Color.red);
         g.setFont(new Font("Serif", Font.BOLD, 40));
         FontMetrics metrics = getFontMetrics(g.getFont());
-        g.drawString("Přiblížil ses k hadovi o: " + snezenaJablka, (OBRAZOVKA_VYSKA - metrics.stringWidth("Přiblížil ses k hadovi o: " + snezenaJablka))/2, g.getFont().getSize());
+        g.drawString("Snězeno jablek: " + snezenaJablka, (OBRAZOVKA_VYSKA - metrics.stringWidth("Snězeno jablek: " + snezenaJablka))/2, g.getFont().getSize());
         }
         else{
             konecHry(g);
@@ -192,13 +192,13 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setColor(Color.red);
         g.setFont(new Font("Serif", Font.BOLD, 40));
         FontMetrics metrics = getFontMetrics(g.getFont());
-        g.drawString("Přiblížil ses k hadovi o: " + snezenaJablka, (OBRAZOVKA_VYSKA - metrics.stringWidth("Přiblížil ses k hadovi o: " + snezenaJablka))/2, g.getFont().getSize());
+        g.drawString("Snězeno jablek: " + snezenaJablka, (OBRAZOVKA_VYSKA - metrics.stringWidth("Snězeno jablek: " + snezenaJablka))/2, g.getFont().getSize());
         // text pro konec hry
         g.setColor(new Color(0xD2691E));
         g.setFont(new Font("Monospaced", Font.BOLD, 50));
         FontMetrics metricsKonec = getFontMetrics(g.getFont());
-        g.drawString("  Byl jsi už moc blízko :(", (OBRAZOVKA_VYSKA/1 - metricsKonec.stringWidth("Byl jsi už moc blízko :("))/3, OBRAZOVKA_SIRKA/2); // když nevíš jak to dát na střed tak tam prostě dej spoustu mezer xD
-        g.drawString("  Mačkáš mi hada kámo!", (OBRAZOVKA_VYSKA/1 - metricsKonec.stringWidth("Mačkáš mi hada kámo!"))/3, OBRAZOVKA_SIRKA/2 + g.getFont().getSize());
+        g.drawString("Konec hry ", (OBRAZOVKA_VYSKA/2 - metricsKonec.stringWidth("Konec hry")), OBRAZOVKA_SIRKA/2);
+       // g.drawString("  Mačkáš mi hada kámo!", (OBRAZOVKA_VYSKA/1 - metricsKonec.stringWidth("Mačkáš mi hada kámo!"))/3, OBRAZOVKA_SIRKA/2 + g.getFont().getSize());
         // tlačítko pro opětovné hraní
         if(!playAgainButton.isVisible()) {
             playAgainButton.setVisible(true); // zobrazí tlačítko pro opětovné hraní
